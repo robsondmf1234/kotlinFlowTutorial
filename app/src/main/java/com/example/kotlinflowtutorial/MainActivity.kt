@@ -20,10 +20,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupRecycler()
-        observerLanguages()
+        observerFlowLanguages()
+//        observerLiveDataGetLanguages()
     }
 
-    private fun observerLanguages() {
+    //Observa o LiveData que retorna valores do tipo String
+    private fun observerLiveDataGetLanguages() {
+        viewModel.languagesData.observe(this) {
+            Log.d("MainActivity", "Received language: $it")
+            mainAdapter.addLanguage(it)
+        }
+    }
+
+    //Observa o getLanguages() que retorna valores do tipo Flow<String>
+    private fun observerFlowLanguages() {
         lifecycleScope.launch {
             viewModel.getLanguages().collect { language ->
                 Log.d("MainActivity", "Received language: $language")

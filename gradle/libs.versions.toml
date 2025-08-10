@@ -26,7 +26,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version = "1.4.2" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version = "1.4.2" }
 androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version = "2.6.1" }
-androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version = "2.6.1" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version = "2.6.1" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
